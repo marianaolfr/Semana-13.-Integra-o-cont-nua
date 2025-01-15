@@ -1,18 +1,18 @@
-from aluno import Aluno
-from turma import Turma
+from student import Student
+from classgroup import ClassGroup
 
-alunos = []
-alunos.append(Aluno('Joao', 'Pedro', 11))
-alunos.append(Aluno('Maria', 'Silva', 7))
-alunos.append(Aluno('Carlos', 'Santos', 8))
-alunos.append(Aluno('Luisa', 'Fernandes', 9))
-alunos.append(Aluno('Pedro', 'Oliveira', 6))
+students = [
+    Student('John', 'Doe', 11),
+    Student('Mary', 'Smith', 7),
+    Student('Charles', 'Brown', 8),
+    Student('Louise', 'White', 9),
+    Student('Peter', 'Green', 6)
+]
 
-turmaObject = Turma()
-turmaObject.cadastrarAlunos(alunos)
+class_group = ClassGroup()
+class_group.register_students(students)
 
-turmaObject.mostrarAlunos()
+class_group.display_students()
 print('*' * 30)
-print('Aluno com menor nota:', turmaObject.menorNota.mostrarAluno())
-print('Aluno com maior nota:', turmaObject.maiorNota.mostrarAluno())
-turmaObject.maiorNota.mostrarAluno()
+print('Student with the lowest grade:', class_group.lowest_grade.display_student())
+print('Student with the highest grade:', class_group.highest_grade.display_student())
