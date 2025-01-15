@@ -3,18 +3,17 @@ on: [push, pull_request]
 
 jobs:
   test:
-    name: Testes
+    name: Tests
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout do código
+    - name: Checkout Code
       uses: actions/checkout@v2
 
-    - name: Configurar ambiente Python
+    - name: Set Up Python Environment
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
 
-    - name: Executar testes
-      run: |
-               python testes.py
+    - name: Run Tests
+      run: python tests.py
