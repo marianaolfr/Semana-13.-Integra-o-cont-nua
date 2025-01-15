@@ -1,8 +1,8 @@
-class Aluno:
-    def __init__(self, nome, sobrenome, nota):
-        self.nome = nome
-        self.sobrenome = sobrenome
-        self.nota = nota
+class Student:
+    def __init__(self, first_name, last_name, grade):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.grade = grade
 
-    def mostrarAluno(self):
-        return f'Aluno: {self.nome} {self.sobrenome} - Nota: {self.nota}'
+    def display_student(self):
+        return f"Student: {self.first_name} {self.last_name} - Grade: {self.grade}"
